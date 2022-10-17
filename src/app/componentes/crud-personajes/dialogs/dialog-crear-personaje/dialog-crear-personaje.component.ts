@@ -130,7 +130,10 @@ export class DialogCrearPersonajeComponent implements OnInit {
     if (!this.data) {
       console.log({...this.formCrearPersonaje.value, poderes: this.chipsPOderes});
       try {
-        await this.PersonajesService.crearPersonaje({...this.formCrearPersonaje.value, poderes: this.chipsPOderes});
+        let res = await this.PersonajesService.crearPersonaje({...this.formCrearPersonaje.value, poderes: this.chipsPOderes});
+        
+        console.log(res);
+        
         window.alert('Personaje creado correctamente')
         this.reiniciarFormulario();
       } catch (error) {
@@ -138,7 +141,9 @@ export class DialogCrearPersonajeComponent implements OnInit {
       }
     }else{
       try {
-        await this.PersonajesService.actualizarPersonaje(this.data.id ,{...this.formCrearPersonaje.value});
+        let res = await this.PersonajesService.actualizarPersonaje(this.data.id ,{...this.formCrearPersonaje.value});
+        console.log(res);
+        
         window.alert('Personaje Actualizado correctamente')
         this.reiniciarFormulario();
       } catch (error) {

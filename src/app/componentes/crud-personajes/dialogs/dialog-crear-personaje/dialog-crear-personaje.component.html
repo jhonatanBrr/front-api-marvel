@@ -19,7 +19,7 @@ font-size: 25px;">{{titulo}}</h2>
                 <input formControlName="lugar_operacion" matInput>
             </mat-form-field>
         </div>
-        <div class="col-6">
+        <div class="col-6" *ngIf="!data">
             <mat-form-field appearance="outline">
                 <mat-label>Grupo</mat-label>
                 <mat-select formControlName="grupo_id">
@@ -27,7 +27,7 @@ font-size: 25px;">{{titulo}}</h2>
                 </mat-select>
             </mat-form-field>
         </div>
-        <div class="col-6">
+        <div class="col-6" *ngIf="!data">
             <mat-form-field appearance="outline">
                 <mat-label>Vehiculo</mat-label>
                 <mat-select formControlName="vehiculo_id" >
@@ -35,13 +35,13 @@ font-size: 25px;">{{titulo}}</h2>
                 </mat-select>
             </mat-form-field>
         </div>
-        <div class="col-6">
+        <div class="col-6" *ngIf="!data">
             <mat-form-field appearance="outline">
                 <mat-label>imagen url</mat-label>
                 <input formControlName="imagen" matInput>
             </mat-form-field>
         </div>
-        <div class="col-6">
+        <div class="col-6" *ngIf="!data">
             <mat-form-field appearance="outline">
                 <mat-label>condición</mat-label>
                 <mat-select formControlName="condicion_id">
@@ -49,7 +49,7 @@ font-size: 25px;">{{titulo}}</h2>
                 </mat-select>
             </mat-form-field>
         </div>
-        <div class="col-12">
+        <div class="col-12" *ngIf="!data">
             <mat-form-field appearance="outline">
                 <mat-label>Poderes</mat-label>
                 <mat-select [(ngModel)]="poder" [ngModelOptions]="{standalone: true}">
