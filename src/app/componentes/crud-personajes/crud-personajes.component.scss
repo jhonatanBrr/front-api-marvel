@@ -1,0 +1,96 @@
+.input_content{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    background: rgb(32, 35, 41);
+    height: calc(50vh - 343px);
+    padding-top: 0px !important;
+}
+
+input{
+    height: 45px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.card{
+    height: 230px;
+    margin: 10px !important;
+    background: rgb(60 62 68);
+}
+
+.content_cards{
+    height: 550px; 
+    background: rgb(32, 35, 41); 
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.imagen_card{
+    width: 100% !important;
+    border-radius: 5px;
+    height: 228px;
+}
+
+.info_personaje{
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}
+
+.titulo{
+    color: rgb(158 157 152);
+    font-weight: 700 !important;
+}
+
+.descripcion{
+    color: white;
+}
+
+@media (max-width: 2327px) {
+    .card{
+        height: 230px;
+        margin: 20px !important;
+        background: rgb(60 62 68);
+    }
+}
+
+@media (max-width: 540px) {
+    .input_content {
+        height: calc(50vh - 280px);
+    }
+}
+
+@media (max-width: 414px) {
+    .input_content{
+        height: calc(50vh - 235px);
+    }
+}
+
+h1{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 15px;
+    color: red;
+}
+
+
+.titulo_v{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+
+.descripcion_v{
+    color: #9e9d98;
+}
+
+::ng-deep .mat-menu-panel{
+    background: #3c3e44;
+}

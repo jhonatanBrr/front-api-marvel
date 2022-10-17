@@ -1,0 +1,68 @@
+* {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome and Opera */
+    *::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    *:hover::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    *::-webkit-scrollbar-corner {
+      background-color: transparent !important;
+    }
+    *::-webkit-scrollbar-track {
+      background-color: rgba(255, 255, 255, 0);
+      opacity: 0;
+    }
+    *::-webkit-scrollbar-thumb {
+      background-color: rgba(130, 157, 190, 0.344);
+      outline: 0px solid rgba(0, 0, 0, 0.226);
+      border-radius: 8px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(130, 157, 190, 0.515);
+      outline: 0px solid rgba(0, 0, 0, 0.274);
+      border-radius: 8px;
+    }
+    *::-webkit-scrollbar-thumb:active {
+      background-color: rgba(130, 157, 190, 0.515);
+      outline: 0px solid rgba(110, 110, 110, 0.247);
+      border-radius: 8px;
+    }
+  
+    * {
+      scrollbar-color: rgba(116, 116, 116, 0.212) rgba(255, 255, 255, 0);
+      scrollbar-width: thin;
+    }
+  }
+  
+  .table-container::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  div.scrollProds::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .dialog-footer::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  
+  .mat-drawer-inner-container {
+    overflow: overlay !important;
+  }

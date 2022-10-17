@@ -1,0 +1,61 @@
+<section>
+    <div class="input_content">
+        <div class="row" style="width: 100%;">
+            <div class="col-lg-8 col-md-6 col-sm-12 mb-2">
+                <input placeholder="Buscar" style="width: 100%;" [(ngModel)]="buscador" (input)="filtrarPersonajes()" type="text">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 mb-2">
+                <button type="button" class="btn btn-danger" (click)="abrirDialogCrear()">Crear</button>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6  mb-2">
+                <button type="button" class="btn btn-secondary" (click)="consultarPersonajes()">Actualizar</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-12" class="content_cards">
+        <div class="row ">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" *ngFor="let personaje of personajesFiltrados">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-5 ">
+                            <img (click)="editarPersonaje(personaje)" class="imagen_card" [src]="personaje.imagen">
+                        </div>
+                        <div class="col-7">
+                            <div class="info_personaje">
+                                <h1 style="color: #ffffff;
+                                font-size: 25px;">{{personaje.nombre}}</h1>
+                                <div style="display: grid;">
+                                    <span class="titulo">Grupo</span>
+                                    <span class="descripcion">{{personaje.grupo.tipo}}</span>
+                                    <span class="titulo">Lugar de operacion</span>
+                                    <span class="descripcion">{{personaje.lugar_operacion}}</span>
+                                    <span class="titulo">Condición</span>
+                                    <span class="descripcion">{{personaje.condicion.condicion}}</span>
+                                    <a *ngIf="personaje.vehiculo" (click)="cargarVehiculo(personaje.vehiculo)" [matMenuTriggerFor]="menu">Ver vehiculo</a>
+                                    <a *ngIf="personaje.poderes.length > 0" [matMenuTriggerFor]="menu2" (click)="cargarPoderes(personaje.poderes)">Ver poderes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<mat-menu #menu="matMenu">
+    <div style="display: grid;">
+        <span class="titulo_v">Vehiculo</span>
+        <span class="descripcion_v">{{vehiculo?.vehiculo}}</span>
+        <span class="titulo_v">Tipo</span>
+        <span class="descripcion_v">{{vehiculo?.tipo}}</span>
+    </div>
+</mat-menu>
+
+<mat-menu #menu2="matMenu">
+    <div style="display: grid;">
+        <span class="titulo_v">Poderes</span>
+        <span *ngFor="let poder of poderes" class="descripcion_v">{{poder?.tipo}}</span>
+    </div>
+</mat-menu>
